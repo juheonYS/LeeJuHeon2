@@ -51,7 +51,7 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY'):
         df_20th = df.loc["1900":"2000"]
         if not df_20th.empty:
             '''코드를 작성하시오'''
-        axs[1, 0].boxplot(df_20th[sunactivity_col], vert=False)
+            axs[1, 0].boxplot(df_20th[sunactivity_col], vert=False)
     except:
         # 해당 기간 데이터가 없을 경우 예외 처리
         pass
@@ -104,4 +104,5 @@ try:
 
 except Exception as e:
     st.error(f"오류가 발생했습니다: {e}")
+
     st.info("데이터 파일의 구조를 확인해주세요. 'data/sunspots.csv' 파일이 존재하고 'YEAR'와 'SUNACTIVITY' 컬럼이 있어야 합니다.")
